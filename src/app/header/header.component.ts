@@ -1,0 +1,42 @@
+import { Component, OnInit } from '@angular/core';
+import { CabinsService } from '../cabins/cabins.service';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
+
+  CabinsdataList:any;
+  cabintabMainList:any;
+  cabintabMainListB3:any;
+  cabintabMainListB4:any;
+  cabintabMainListB7:any;
+  cabintabMainListB12:any;
+
+  constructor(private CabinsService:CabinsService) { }
+
+  ngOnInit(): void {
+    this.CabinsService.getCanins().subscribe(res=>{
+      this.CabinsdataList=res.data[0];
+    })
+
+    this.CabinsService.postCaninsMain().subscribe(res=>{
+      this.cabintabMainList=res.data;
+    })
+    this.CabinsService.postCaninsMainBed3().subscribe(res=>{
+      this.cabintabMainListB3=res.data;
+    })
+    this.CabinsService.postCaninsMainBed4().subscribe(res=>{
+      this.cabintabMainListB4=res.data;
+    })
+    this.CabinsService.postCaninsMainBed7().subscribe(res=>{
+      this.cabintabMainListB7=res.data;
+    })
+    this.CabinsService.postCaninsMainBed12().subscribe(res=>{
+      this.cabintabMainListB12=res.data;
+    })
+  }
+
+}

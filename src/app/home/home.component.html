@@ -1,0 +1,275 @@
+<div class="main-content">
+	<div class="banner-sec">
+
+		  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+		  <div class="overlay"></div>
+
+		  <!-- The HTML5 video element that will create the background video on the header -->
+		  <div class="main-banner">
+			  <video [muted]="true" autoplay playsinline loop id="bg-video">
+				<source src="assets/images/bannerNewWidLogo.mp4" type="video/mp4">
+			  </video>
+        <video [muted]="true" autoplay playsinline loop id="bg-video-mob">
+          <source src="assets/images/bannerVideoMobile.mp4" type="video/mp4">
+        </video>
+			  <!-- <div class="video-overlay header-text">
+				<div class="caption">
+					 <h2>get the Luxury cabin Experience</h2>
+					<h2>{{homedataList?.banner_text}}</h2>
+					<div class="main-button scroll-to-section">
+						<a href="/Home#perfectCabin" class="btn-lrnmre mt-5">View Details</a>
+
+					</div>
+				</div>
+			</div> -->
+		  </div>
+	</div>
+	<div class="fnd-cbn d-block w-100 mb-5" id="perfectCabin">
+		<div class="container">
+			<div class="row">
+				<span class="d-block w-100 mt-5 mb-2 text-center titl">Find Your Perfect Gatlinburg Cabin</span>
+				<strong class="d-inline-block w-100 mb-3 text-center titl2 font-weight-normal">We offer luxury cabins in the Gatlinburg, Pigeon Forge, & Sevierville area</strong>
+				<span class="d-inline-block w-100 mb-5 text-center titl3">
+				At Ghosal Luxury Lodging, we pride ourselves on providing the ultimate luxury experience in
+				Gatlinburg with plenty of space and amenities to entertain all your friends and family.
+				Our cabins can sleep up to 48 people, have endless entertaining amenities, and have some of the best views of the Great Smoky Mountains.
+				</span>
+
+				<div class="col-xl-3 col-md-6 col-sm-12 tb-img-sec hmcrd">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_1}}" alt="Ghosal" class=""/>
+						<div class="card-img-overlay text-center">
+						<h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+						<p class="card-text d-block w-100">2 Bedrooms | Sleeps 8</p>
+						<a routerLink="/cabins/8" class="vw-lnk-btn">View Cabin</a>
+						</div>
+					</div>
+					<h4 class="card-title text-uppercase pb-2 btm-img-txt">Majestic Waters</h4>
+				</div>
+				<div class="col-xl-3 col-md-6 col-sm-12 tb-img-sec hmcrd">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_2}}" alt="Ghosal" class=""/>
+						<div class="card-img-overlay text-center">
+							<h4 class="card-title text-uppercase pb-2">Smoky Mountain Splash</h4>
+							<p class="card-text d-block w-100">3 Bedrooms | Sleeps 10</p>
+							<a routerLink="/cabins/3" class="vw-lnk-btn">View Cabin</a>
+						  </div>
+					</div>
+					<h4 class="card-title text-uppercase pb-2 btm-img-txt">Smoky Mountain Splash</h4>
+				</div>
+				<div class="col-xl-3 col-md-6 col-sm-12 tb-img-sec hmcrd">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_3}}" alt="Ghosal" class=""/>
+						<div class="card-img-overlay text-center">
+							<h4 class="card-title text-uppercase pb-2">Mountain Pools & Views</h4>
+							<p class="card-text d-block w-100">4 Bedrooms | Sleeps 12</p>
+							<a routerLink="/cabins/4" class="vw-lnk-btn">View Cabin</a>
+						  </div>
+					</div>
+					<h4 class="card-title text-uppercase pb-2 btm-img-txt">Mountain Pools & Views</h4>
+				</div>
+				<div class="col-xl-3 col-md-6 col-sm-12 tb-img-sec hmcrd">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_4}}" alt="Ghosal" class=""/>
+						<div class="card-img-overlay text-center">
+							<h4 class="card-title text-uppercase pb-2">Smoky Mountain Spring</h4>
+							<p class="card-text d-block w-100">4 Bedrooms | Sleeps 12</p>
+							<a routerLink="/cabins/13" class="vw-lnk-btn">View Cabin</a>
+						  </div>
+					</div>
+					<h4 class="card-title text-uppercase pb-2 btm-img-txt">Smoky Mountain Spring</h4>
+				</div>
+        <div class="text-center d-block w-100 mt-5">
+					<a routerLink="/cabins"><button class="btn-discvr-mre">Other cabins</button></a>
+				</div>
+
+				<!-- <div class="col-xl-3 col-md-6 col-sm-12 hver-sec rspimg-sec">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_1}}" alt="Ghosal" class=""/>
+					</div>
+					<button class="lrnmre-sml">Learn More</button>
+				</div>
+				<div class="col-xl-3 col-md-6 col-sm-12 hver-sec rspimg-sec">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_2}}" alt="Ghosal" class=""/>
+					</div>
+					<button class="lrnmre-sml">Learn More</button>
+				</div>
+				<div class="col-xl-3 col-md-6 col-sm-12 hver-sec rspimg-sec">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_3}}" alt="Ghosal" class=""/>
+					</div>
+					<button class="lrnmre-sml">Learn More</button>
+				</div>
+				<div class="col-xl-3 col-md-6 col-sm-12 hver-sec rspimg-sec">
+					<div class="img-sec">
+						<img src="{{homedataList?.Cabin_Image_4}}" alt="Ghosal" class=""/>
+					</div>
+					<button class="lrnmre-sml">Learn More</button>
+				</div> -->
+				<!-- <div class="text-center d-block w-100 mt-5">
+					<button class="btn-discvr-mre">Discover More</button>
+				</div> -->
+			</div>
+		</div>
+	</div>
+
+
+	<!-- Booking -->
+	<!-- <div class="bkng d-block w-100 text-center">
+		<div class="container">
+			<div class="row">
+				<span class="d-block w-100 mtop-100 bkng-titl">Bookings available summer 2022</span>
+				<div class="col-xl-7 col-md-7 col-xs-12 mx-auto mt-5">
+					<div class="nmbr d-inline-block w-100">
+						<span class="d-block float-left pr-5">Select Number of rooms</span>
+						<div class="d-block float-left nmbr-sec position-relative">
+              <p>
+                <i class="fa fa-angle-up add" id="add1" aria-hidden="true"></i>
+                <input id="qty1" type="text" value="1" class="qty"/>
+                <i class="fa fa-angle-down minus" id="minus1" aria-hidden="true"></i>
+              </p>
+						</div>
+
+						<button class="btn-fnd-cbn d-block float-right text-uppercase">Find Cabins</button>
+					</div>
+				</div>
+				<div class="text-center d-block w-100 mt-5">
+					<button class="btn-lrnmre text-uppercase">Book Now</button>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="img-txt-sec position-relative">
+		<img src="assets/images/enjoy.jpg" alt="" class="w-100"/>
+		<p class="d-inline-block w-60 m-auto text-center position-absolute bnr-txt-sml lng-txt smky-mntn">
+		  GO EXPLORE. GO LIVE. GHOSAL.
+		</p>
+	  </div>
+</div>
+<!-- Endless Amenities -->
+<div class="aments">
+	<div class="d-block w-100 pb-5 pt-5 rspamnt-bx">
+		<div class="container">
+			<div class="row">
+				<span class="d-block w-100 mtop-100 titl text-center mb-5">Explore Endless Amenities</span>
+
+          <div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 hgt350">
+            <div class="bg-white totl-sec hgt350">
+              <span class="titl-sml">{{homedataList?.Amenities_Title_1}}</span>
+              <hr>
+              <p class="prgrph">{{homedataList?.Amenities_Paragraph_1}}</p>
+              <!-- <button class="btn-discvr-mre text-uppercase mt-4">Learn More</button> -->
+            </div>
+          </div>
+          <div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 hgt350 Rspamnts-lst">
+            <img src="{{homedataList?.Amenities_Image_1}}" alt="" class="w-100  h-100"/>
+          </div>
+        <div class="amnts-dv">
+          <div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 float-left hgt350 Rspamnts-lst">
+            <img src="{{homedataList?.Amenities_Image_2}}" alt="" class="w-100  h-100"/>
+          </div>
+          <div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 hgt350 float-left ">
+            <div class="bg-white totl-sec hgt350">
+              <span class="titl-sml">{{homedataList?.Amenities_Title_2}}</span>
+              <hr>
+              <p class="prgrph">{{homedataList?.Amenities_Paragraph_2}}</p>
+              <!-- <button class="btn-discvr-mre text-uppercase mt-4">Learn More</button> -->
+            </div>
+          </div>
+      </div>
+
+				<div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 hgt350">
+					<div class="bg-white totl-sec hgt350">
+						<span class="titl-sml">{{homedataList?.Amenities_Title_3}}</span>
+						<hr>
+						<p class="prgrph">{{homedataList?.Amenities_Paragraph_3}}</p>
+						<!-- <button class="btn-discvr-mre text-uppercase mt-4">Learn More</button> -->
+					</div>
+				</div>
+				<div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 hgt350 Rspamnts-lst">
+					<img src="{{homedataList?.Amenities_Image_3}}" alt="" class="w-100  h-100"/>
+				</div>
+
+        <div class="amnts-dv">
+          <div class="col-xl-6 col-md-12 col-xs-12 float-left text-center p-0 hgt350 Rspamnts-lst">
+            <img src="{{homedataList?.Amenities_Image_4}}" alt="" class="w-100 h-100"/>
+          </div>
+          <div class="col-xl-6 col-md-12 col-xs-12 text-center p-0 hgt350 float-left">
+            <div class="bg-white totl-sec hgt350">
+              <span class="titl-sml">{{homedataList?.Amenities_Title_4}}</span>
+              <hr>
+              <p class="prgrph">{{homedataList?.Amenities_Paragraph_4}}</p>
+              <!-- <button class="btn-discvr-mre text-uppercase mt-4">Learn More</button> -->
+            </div>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="exprnce">
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-md-12 col-xl-6 p-0">
+				<img src="{{homedataList?.Gatlinburg_Image}}" alt="" class="w-100 h-100"/>
+			</div>
+			<div class="col-md-12 col-xl-6 text-align-left bg-brwn p-0">
+				<div class="p-5">
+					<span class="titl-ex-sml d-block w-100 text-uppercase text-white">{{homedataList?.Gatlinburg_Small_Text}}</span>
+					<span class="titl-mdm d-block w-100 text-white">{{homedataList?.Gatlinburg_Text}}</span>
+					<p class="prgrph text-white mt-4 d-block w-100">{{homedataList?.Gatlinburg_Paragraph}}</p>
+					<a href="https://www.gatlinburg.com/things-to-do/" target="_blank"><button class="btn-discvr-mre text-uppercase mt-4">Learn More</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Cabin Style -->
+<!-- <div class="cbnstle mt-5 text-left">
+	<div class="container-fluid">
+		<div class="row">
+		<div class="d-inline-block w-100 text-center mb-5">
+		<span class="d-block w-100 titl text-center mb-1">Whats Your Cabin Style</span>
+			<hr>
+		</div>
+			<div class="col-md-6 text-align-left pl-60 bdr-btm pt-4">
+				<div class="all-lft-cntnt d-block w-100 mt-5">
+					<div class="pl-5 pr-4 d-block float-left img-lft-cont">
+						<img src="../../assets/images/indtrl.png" alt="" class="icn-img"/>
+					</div>
+					<div class="pl-5 rspTxt">
+						<span class="d-block w-100 mb-2 shrt-titl">{{homedataList?.Cabin_Style_Text_1}}</span>
+						<p class="d-block w-90 mb-2 shrt-sub-txt pb-4">{{homedataList?.Cabin_Style_Paragraph_1}}</p>
+					</div>
+				</div>
+				<div class="all-lft-cntnt d-block w-100 mt-4">
+					<div class="pl-5 pr-4 d-block float-left img-lft-cont">
+						<img src="../../assets/images/indtrl.png" alt="" class="icn-img"/>
+					</div>
+					<div class="pl-5 rspTxt">
+						<span class="d-block w-100 mb-2 shrt-titl">{{homedataList?.Cabin_Style_Text_2}}</span>
+						<p class="d-block w-90 mb-2 shrt-sub-txt pb-4">{{homedataList?.Cabin_Style_Paragraph_2}}</p>
+					</div>
+				</div>
+				<div class="all-lft-cntnt d-block w-100 mt-4">
+					<div class="pl-5 pr-4 d-block float-left img-lft-cont">
+						<img src="../../assets/images/indtrl.png" alt="" class="icn-img"/>
+					</div>
+					<div class="pl-5 rspTxt">
+						<span class="d-block w-100 mb-2 shrt-titl">{{homedataList?.Cabin_Style_Text_3}}</span>
+						<p class="d-block w-90 mb-2 shrt-sub-txt pb-4 border-0">{{homedataList?.Cabin_Style_Paragraph_3}}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-6 p-0 hgt550">
+				<img src="../../assets/images/Exp.jpg" alt="" class="w-100 img-hgt"/>
+			</div>
+
+		</div>
+	</div>
+</div> -->
+

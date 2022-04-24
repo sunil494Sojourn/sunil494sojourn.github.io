@@ -1,0 +1,245 @@
+<div class="main-content">
+  <!-- <div class="banner-short d-inline-block w-100 position-relative">
+    <img src="{{CabindetailsList?.Cabin_Details_Banner}}" alt="Image" class="w-100"/>
+    <p class="d-inline-block w-50 m-auto text-center position-absolute text-uppercase bnr-txt-sml">{{CabindetailsList?.Cabin_Details_Text}}</p>
+  </div> -->
+  <div class="banner-short d-inline-block w-100 position-relative">
+    <img src="{{cabinBanner?.Cabin_Details_Banner}}" alt="" class="w-100"/>
+    <p class="d-inline-block w-50 m-auto text-center position-absolute text-uppercase bnr-txt-sml">{{cabinBanner?.Cabin_Details_Text}}</p>
+  </div>
+  <div class="brdcmp d-inline-block w-100 pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="brdcmp-cntnt">
+            <a class="d-block float-left" routerLink="/Home"><span class="d-block float-left mr-3">Home</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="d-block float-left" routerLink="/cabins"><span class="d-block float-left mr-3">Cabins</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="d-block float-left"><span class="d-block float-left mr-3 brdcmp-mn-mnu">Cabin Details</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-sec d-block w-100 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="titl-sec d-block w-100">
+            <span class="d-block w-100 text-uppercase mb-5">{{CabindetailsList?.Cabin_Text}}</span>
+          </div>
+        </div>
+        <div class="col-md-5">
+           <div class="img-slde-sec">
+            <div class="container1">
+              <img id="expandedImg" alt="Image" style="width:100%" src="{{CabindetailsList?.Bed_Room_Image_1}}">
+            </div>
+
+            <div class="row">
+              <div class="column focus" id="cl1" onclick="myFunction2(this);">
+                <img src="{{CabindetailsList?.Bed_Room_Image_1}}" alt="Nature" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column" id="cl2" onclick="myFunction2(this);">
+                <img src="{{CabindetailsList?.Bed_Room_Image_2}}" alt="Snow" style="width:100%" onclick="myFunction(this);">
+              </div>
+              <div class="column" id="cl3" onclick="myFunction2(this);">
+                <img src="{{CabindetailsList?.Bed_Room_Image_3}}" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="container">
+            <div class="carousel-container position-relative row">
+
+
+            <div id="myCarousel" class="carousel slide" data-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-slide-number="0">
+                  <img src="{{CabindetailsList?.Bed_Room_Image_1}}" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/Pn6iimgM-wo/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="1">
+                  <img src="https://source.unsplash.com/tXqVe7oO-go/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/tXqVe7oO-go/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="2">
+                  <img src="https://source.unsplash.com/qlYQb7B9vog/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/qlYQb7B9vog/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="3">
+                  <img src="https://source.unsplash.com/QfEfkWk1Uhk/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/QfEfkWk1Uhk/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="4">
+                  <img src="https://source.unsplash.com/CSIcgaLiFO0/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/CSIcgaLiFO0/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="5">
+                  <img src="https://source.unsplash.com/a_xa7RUKzdc/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/a_xa7RUKzdc/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="6">
+                  <img src="https://source.unsplash.com/uanoYn1AmPs/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/uanoYn1AmPs/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="7">
+                  <img src="https://source.unsplash.com/_snqARKTgoc/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/_snqARKTgoc/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="8">
+                  <img src="https://source.unsplash.com/M9F8VR0jEPM/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/M9F8VR0jEPM/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+                <div class="carousel-item" data-slide-number="9">
+                  <img src="https://source.unsplash.com/Q1p7bh3SHj8/1600x900/" class="d-block w-100" alt="..." data-remote="https://source.unsplash.com/Q1p7bh3SHj8/" data-type="image" data-toggle="lightbox" data-gallery="example-gallery">
+                </div>
+              </div>
+            </div>
+
+            <div id="carousel-thumbs" class="carousel slide" data-interval="false">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row mx-0">
+                    <div id="carousel-selector-0" class="thumb col-4 col-sm-4 px-1 py-2 selected" data-target="#myCarousel" data-slide-to="0">
+                      <img src="https://source.unsplash.com/Pn6iimgM-wo/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-1" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="1">
+                      <img src="https://source.unsplash.com/tXqVe7oO-go/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-2" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="2">
+                      <img src="https://source.unsplash.com/qlYQb7B9vog/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-3" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="3">
+                      <img src="https://source.unsplash.com/QfEfkWk1Uhk/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-4" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="4">
+                      <img src="https://source.unsplash.com/CSIcgaLiFO0/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-5" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="5">
+                      <img src="https://source.unsplash.com/a_xa7RUKzdc/600x400/" class="img-fluid" alt="...">
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row mx-0">
+                    <div id="carousel-selector-6" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="6">
+                      <img src="https://source.unsplash.com/uanoYn1AmPs/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-7" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="7">
+                      <img src="https://source.unsplash.com/_snqARKTgoc/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-8" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="8">
+                      <img src="https://source.unsplash.com/M9F8VR0jEPM/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div id="carousel-selector-9" class="thumb col-4 col-sm-4 px-1 py-2" data-target="#myCarousel" data-slide-to="9">
+                      <img src="https://source.unsplash.com/Q1p7bh3SHj8/600x400/" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col-2 px-1 py-2"></div>
+                    <div class="col-2 px-1 py-2"></div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carousel-thumbs" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carousel-thumbs" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+            </div>
+            </div>  -->
+
+        </div>
+        <div class="col-md-7">
+          <div class="totl-cntnt-insde font-weight-bold">
+            <!-- <span class="d-inline-block w-auto text-uppercase fnt-titl"> {{CabindetailsList?.Bed_Room_content}}</span> -->
+
+            <div class="d-block w-100 float-left mb-4 pb-2">
+              <span class="d-block w-100 rteTxt mt-2 mb-2">From ${{CabindetailsList?.price}} per night</span>
+              <a href="{{CabindetailsList?.book_link}}" target="_blank" class="d-block float-left pr-3 lst-txt mr-3">Rates and booking</a>
+              <span class="d-block float-left pr-3 lst-txt mr-3"><strong>Bedrooms :</strong> {{CabindetailsList?.Bedrooms}}</span>
+              <span class="d-block float-left lst-txt border-0"><strong>Sleeps :</strong> {{CabindetailsList?.Sleeps}}</span>
+              <span class="d-block float-left lst-txt w-100 mt-3 mb-3 border-0"><strong>View :</strong> {{CabindetailsList?.View}}</span>
+              <span class="d-block float-left pr-3 lst-txt mr-3"><strong>Location :</strong> {{CabindetailsList?.Location}}</span>
+              <span class="d-block float-left lst-txt border-0"><strong>Resort :</strong> <a href="{{CabindetailsList?.Resort_link}}" target="_blank"> {{CabindetailsList?.Resort}}</a> </span>
+            </div>
+            <a href="{{CabindetailsList?.book_link}}" target="_blank" class="d-block float-left text-uppercase btn-discvr-mre">Book Now</a>
+          </div>
+        </div>
+        <div class="col-xl-12">
+          <p class="d-inline-block w-100 pt-5 pb-0 mb-0">
+            {{CabindetailsList?.cabin_details}}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="amnts d-inline-block w-100 text-center mt-4 pt-4 pb-3">
+      <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              <div class="titl-sec d-block w-100">
+                <span class="d-block w-100 text-uppercase mb-5">Our Amenities</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">King Bed (2)</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">Queen Sleeper(1)</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left twolne">Donkey Kong,
+                  Pac Man +67</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left twolne">Home Theatre with
+                  Sofa Seating</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">Pool Table</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">Flat Panel HD TV(4)</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">CD Player</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">Wifi</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left">Stereo</span>
+              </div>
+            </div>
+            <div class="col-md-4 col-xl-3 col-sm-6 float-left mb-2">
+              <div class="amnts-lst">
+                <img src="assets/images/amnts-tick.png" alt="Ghosal" class="d-block float-left pt-1"/>
+                <span class="d-block float-left twolne">Additional Deck Seating</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

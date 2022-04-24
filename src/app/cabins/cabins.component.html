@@ -1,0 +1,312 @@
+<div class="main-content">
+  <div class="banner-short d-inline-block w-100 position-relative">
+    <img src="{{CabinsdataList?.Our_Cabins_Image}}" alt="image" class="w-100" />
+    <p class="d-inline-block w-100 m-auto text-center position-absolute text-uppercase bnr-txt-sml">
+      {{CabinsdataList?.Our_Cabins_Text}}</p>
+  </div>
+  <div class="brdcmp d-inline-block w-100 pt-3 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="brdcmp-cntnt">
+            <a class="d-block float-left" routerLink="/Home"><span class="d-block float-left mr-3">Home</span> <i
+                class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a class="d-block float-left" routerLink="/cabins"><span
+                class="d-block float-left mr-3 brdcmp-mn-mnu">Cabins</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-sec d-block w-100 pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <div class="titl-sec d-block w-100">
+            <span class="d-block w-100">Explore Our Cabins</span>
+          </div>
+
+          <section id="tabs">
+            <nav>
+              <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-2bed-tab" data-toggle="tab" href="#nav-2bed" role="tab"
+                  aria-controls="nav-2bed" aria-selected="true"><span>2 Bedrooms</span></a>
+                <a class="nav-item nav-link" id="nav-3bed-tab" data-toggle="tab" href="#nav-3bed" role="tab"
+                  aria-controls="nav-3bed" aria-selected="false"><span>3 Bedrooms</span></a>
+                <a class="nav-item nav-link" id="nav-4bed-tab" data-toggle="tab" href="#nav-4bed" role="tab"
+                  aria-controls="nav-4bed" aria-selected="false"><span>4 Bedrooms</span></a>
+                <a class="nav-item nav-link" id="nav-7bed-tab" data-toggle="tab" href="#nav-7bed" role="tab"
+                  aria-controls="nav-7bed" aria-selected="false"><span>7 Bedrooms</span></a>
+                <a class="nav-item nav-link" id="nav-12bed-tab" data-toggle="tab" href="#nav-12bed" role="tab"
+                  aria-controls="nav-12bed" aria-selected="false"><span>12 Bedrooms</span></a>
+              </div>
+            </nav>
+            <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-2bed" role="tabpanel" aria-labelledby="nav-2bed-tab">
+                <div class="tb-img-sec">
+                  <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3 rsptab-cntnt"
+                    *ngFor="let cabinTabImg of cabintabMainList">
+                    <a routerLink="/cabins/{{ cabinTabImg.id }}" class="card">
+                      <img class="card-img-top" src="{{cabinTabImg.Bed_Room_Image_1}}"
+                        alt="Card image">
+                      <div class="card-img-overlay text-left">
+                        <h4 class="card-title text-uppercase pb-2">{{cabinTabImg.Bed_Room_content}}</h4>
+                        <p class="card-text d-block float-left">From ${{cabinTabImg.price}}</p>
+                        <a routerLink="/cabins/{{ cabinTabImg.id }}" class=" d-block float-right text-rdmre">View Cabin</a>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                      <div class="card">
+                        <img class="card-img-top" src="../../assets/images/2bedrm2.jpg" alt="Card image">
+                        <div class="card-img-overlay text-left">
+                          <h4 class="card-title text-uppercase pb-2">The Swimming Hole</h4>
+                          <p class="card-text d-block float-left">From $260</p>
+                          <a routerLink="/Cabindetails" class=" d-block float-right text-rdmre">Read More..</a>
+                        </div>
+                      </div>
+                    </div> -->
+
+                  <!-- <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                      <div class="card">
+                        <img class="card-img-top" src="../../assets/images/2bedrm3.jpg" alt="Card image">
+                        <div class="card-img-overlay text-left">
+                          <h4 class="card-title text-uppercase pb-2">The Watering Hole</h4>
+                          <p class="card-text d-block float-left">From $260</p>
+                          <a routerLink="/Cabindetails" class=" d-block float-right text-rdmre">Read More..</a>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm4.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a routerLink="/Cabindetails" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm5.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a routerLink="/Cabindetails" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm6.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">OTHERS</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a routerLink="/Cabindetails" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div> -->
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-3bed" role="tabpanel" aria-labelledby="nav-3bed-tab">
+                <div class="tb-img-sec">
+                  <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3 rsptab-cntnt"
+                    *ngFor="let cabinTabImgB3 of cabintabMainListB3">
+                    <a routerLink="/cabins/{{ cabinTabImgB3.id }}" class="card">
+                      <img class="card-img-top" src="{{cabinTabImgB3.Bed_Room_Image_1}}"
+                        alt="Card image">
+                      <div class="card-img-overlay text-left">
+                        <h4 class="card-title text-uppercase pb-2">{{cabinTabImgB3.Bed_Room_content}}</h4>
+                        <p class="card-text d-block float-left">From ${{cabinTabImgB3.price}}</p>
+                        <a class="d-block float-right text-rdmre" routerLink="/cabins/{{ cabinTabImgB3.id }}">View Cabin</a>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                      <div class="card">
+                        <img class="card-img-top" src="../../assets/images/2bedrm2.jpg" alt="Card image">
+                        <div class="card-img-overlay text-left">
+                          <h4 class="card-title text-uppercase pb-2">The Swimming Hole</h4>
+                          <p class="card-text d-block float-left">From $260</p>
+                          <a routerLink="/Cabindetails" class=" d-block float-right text-rdmre">Read More..</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                      <div class="card">
+                        <img class="card-img-top" src="../../assets/images/2bedrm3.jpg" alt="Card image">
+                        <div class="card-img-overlay text-left">
+                          <h4 class="card-title text-uppercase pb-2">The Watering Hole</h4>
+                          <p class="card-text d-block float-left">From $260</p>
+                          <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm4.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm5.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm6.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">OTHERS</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div> -->
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-4bed" role="tabpanel" aria-labelledby="nav-4bed-tab">
+                <div class="tb-img-sec">
+                  <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3 rsptab-cntnt"
+                    *ngFor="let cabinTabImgB4 of cabintabMainListB4">
+                    <a routerLink="/cabins/{{ cabinTabImgB4.id }}" class="card">
+                      <img class="card-img-top" src="{{cabinTabImgB4.Bed_Room_Image_1}}"
+                        alt="Card image">
+                      <div class="card-img-overlay text-left">
+                        <h4 class="card-title text-uppercase pb-2">{{cabinTabImgB4.Bed_Room_content}}</h4>
+                        <p class="card-text d-block float-left">From ${{cabinTabImgB4.price}}</p>
+                        <a routerLink="/cabins/{{ cabinTabImgB4.id }}" class=" d-block float-right text-rdmre">View Cabin</a>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                      <div class="card">
+                        <img class="card-img-top" src="../../assets/images/2bedrm2.jpg" alt="Card image">
+                        <div class="card-img-overlay text-left">
+                          <h4 class="card-title text-uppercase pb-2">The Swimming Hole</h4>
+                          <p class="card-text d-block float-left">From $260</p>
+                          <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                      <div class="card">
+                        <img class="card-img-top" src="../../assets/images/2bedrm3.jpg" alt="Card image">
+                        <div class="card-img-overlay text-left">
+                          <h4 class="card-title text-uppercase pb-2">The Watering Hole</h4>
+                          <p class="card-text d-block float-left">From $260</p>
+                          <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm4.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm5.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">Majestic Waters</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3">
+                        <div class="card">
+                          <img class="card-img-top" src="../../assets/images/2bedrm6.jpg" alt="Card image">
+                          <div class="card-img-overlay text-left">
+                            <h4 class="card-title text-uppercase pb-2">OTHERS</h4>
+                            <p class="card-text d-block float-left">From $260</p>
+                            <a href="#" class=" d-block float-right text-rdmre">Read More..</a>
+                          </div>
+                        </div>
+                      </div> -->
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-7bed" role="tabpanel" aria-labelledby="nav-7bed-tab">
+                <div class="tb-img-sec">
+
+                  <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3 rsptab-cntnt"
+                    *ngFor="let cabinTabImgB7 of cabintabMainListB7">
+                    <a routerLink="/cabins/{{ cabinTabImgB7.id }}" class="card">
+                      <img class="card-img-top" src="{{cabinTabImgB7.Bed_Room_Image_1}}"
+                        alt="Card image">
+                      <div class="card-img-overlay text-left">
+                        <h4 class="card-title text-uppercase pb-2">{{cabinTabImgB7.Bed_Room_content}}</h4>
+                        <p class="card-text d-block float-left">From ${{cabinTabImgB7.price}}</p>
+                        <a routerLink="/cabins/{{ cabinTabImgB7.id }}" class=" d-block float-right text-rdmre">View Cabin</a>
+                      </div>
+                    </a>
+                  </div>
+
+
+
+                </div>
+              </div>
+              <div class="tab-pane fade" id="nav-12bed" role="tabpanel" aria-labelledby="nav-12bed-tab">
+                <div class="tb-img-sec">
+                  <div class="col-xs-12 col-md-6 col-xl-4 float-left pr-0 mb-3 rsptab-cntnt"
+                    *ngFor="let cabinTabImgB12 of cabintabMainListB12">
+                    <a routerLink="/cabins/{{ cabinTabImgB12.id }}" class="card">
+                      <img class="card-img-top" src="{{cabinTabImgB12.Bed_Room_Image_1}}"
+                        alt="Card image">
+                      <div class="card-img-overlay text-left">
+                        <h4 class="card-title text-uppercase pb-2">{{cabinTabImgB12.Bed_Room_content}}</h4>
+                        <p class="card-text d-block float-left">From ${{cabinTabImgB12.price}}</p>
+                        <a routerLink="/cabins/{{ cabinTabImgB12.id }}" class=" d-block float-right text-rdmre">View Cabin</a>
+                      </div>
+                    </a>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+    <div class="img-txt-sec position-relative mt-3">
+      <img src="assets/images/enjoy.jpg" alt="" class="w-100" />
+      <!-- <p class="d-inline-block w-60 m-auto text-center position-absolute bnr-txt-sml lng-txt">
+        {{CabinsdataList?.Our_Cabins_Footer_Top_Text}}
+      </p> -->
+      <p class="d-inline-block w-60 m-auto text-center position-absolute bnr-txt-sml lng-txt smky-mntn">
+        GO EXPLORE. GO LIVE. GHOSAL.
+      </p>
+    </div>
+  </div>
+
+</div>
